@@ -1,0 +1,31 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Nest-JS-TypeORM",
+  "dateExported": "2022-06-04T17:33:31.828Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "_id": "ff1fa072-9bad-4def-87f1-3c31764c6012",
+      "name": "Articles",
+      "containerId": "",
+      "created": "2022-06-04T17:31:24.433Z",
+      "sortNum": 20000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "6876892d-e9b9-4369-ab66-10e499a0fa82",
+      "colId": "3c78712f-f7dd-427c-8271-266760b5e0cd",
+      "containerId": "ff1fa072-9bad-4def-87f1-3c31764c6012",
+      "name": "FindAll",
+      "url": "http://localhost:3000/article",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2022-06-04T17:26:36.344Z",
+      "modified": "2022-06-04T17:31:43.978Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    }
+  ]
+}

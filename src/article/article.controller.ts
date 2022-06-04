@@ -8,15 +8,15 @@ import {
   Delete,
 } from "@nestjs/common";
 import { ArticleService } from "./article.service";
+import { Article } from "./article.entity";
 
 @Controller("article")
 export class ArticleController {
-  constructor(private readonly articleService: ArticleService) {}
+  private readonly articleService: ArticleService;
 
-  // @Post()
-  // create(@Body() createArticleDto: CreateArticleDto) {
-  //   return this.articleService.create(createArticleDto);
-  // }
+  constructor(articleService: ArticleService) {
+    this.articleService = articleService;
+  }
 
   @Get()
   findAll() {
@@ -28,13 +28,18 @@ export class ArticleController {
     return this.articleService.findOne(+id);
   }
 
-  // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updateArticleDto: UpdateArticleDto) {
-  //   return this.articleService.update(+id, updateArticleDto);
-  // }
+  @Post()
+  create(@Body() article: Article) {
+    return this.articleService.createOne(article);
+  }
 
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.articleService.remove(+id);
-  // }
+  @Patch(":id")
+  update(@Param("id") id: string, @Body() article: Article) {
+    return this.articleService.updateOne(+id, article);
+  }
+
+  @Delete(":id")
+  remove(@Param("id") id: string) {
+    return this.articleService.deleteOne(+id);
+  }
 }
