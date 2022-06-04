@@ -16,9 +16,9 @@ services:
       - ${DB_PORT}:5432
     restart: unless-stopped
   
-  adminer:
+  adminer-nest:
+    container_name: adminer-nest
     image: adminer
-    container_name: atelier-amelie-adminer
     restart: always
     networks:
       - backend

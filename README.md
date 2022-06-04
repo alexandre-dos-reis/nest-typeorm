@@ -46,3 +46,8 @@ $ nest g resource article
 ## Tutorials
 
 https://www.youtube.com/watch?v=uy05FqqJ4TM
+
+## Docs
+
+[Nest JS](https://docs.nestjs.com/techniques/database#migrations)
+[TypeORM](https://typeorm.io/)
