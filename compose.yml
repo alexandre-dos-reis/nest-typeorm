@@ -1,0 +1,34 @@
+---
+version: '3.7'
+services:
+  postgre-nest:
+    container_name: postgre-nest
+    image: postgres:14
+    networks:
+      - backend
+    volumes:
+      - ./volumes/postgres-nest:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:5432
+    restart: unless-stopped
+  
+  adminer:
+    image: adminer
+    container_name: atelier-amelie-adminer
+    restart: always
+    networks:
+      - backend
+    environment: 
+      ADMINER_DESIGN: dracula
+      ADMINER_DEFAULT_SERVER: postgre-nest
+    depends_on: 
+      - postgre-nest
+    ports:
+      - 9999:8080
+
+networks:
+  backend: {}
