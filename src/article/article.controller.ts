@@ -10,7 +10,7 @@ import {
 import { ArticleService } from "./article.service";
 import { Article } from "./article.entity";
 
-@Controller("article")
+@Controller("articles")
 export class ArticleController {
   private readonly articleService: ArticleService;
 
