@@ -52,4 +52,5 @@ https://www.youtube.com/watch?v=uy05FqqJ4TM
 [Nest JS](https://docs.nestjs.com/techniques/database#migrations)
 [TypeORM](https://typeorm.io/)
 [TypeORM Migrations](https://orkhan.gitbook.io/typeorm/docs/migrations#how-migrations-work)
+[TypeORM-seeding](https://github.com/w3tecch/typeorm-seeding)
 [Exploring Nestjs module system](https://javascript.plainenglish.io/exploring-nestjs-nests-module-system-88c6d7ad0970)
