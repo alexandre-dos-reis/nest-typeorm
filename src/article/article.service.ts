@@ -5,32 +5,28 @@ import { Article } from "./article.entity";
 
 @Injectable()
 export class ArticleService {
-  private articleRepository: Repository<Article>;
-
   constructor(
     @InjectRepository(Article)
-    articleRepository: Repository<Article>
-  ) {
-    this.articleRepository = articleRepository;
-  }
+    private articleRepository: Repository<Article>
+  ) {}
 
   findAll(): Promise<Article[]> {
     return this.articleRepository.findBy({ isOnline: true });
   }
 
-  findOne(id: number): Promise<Article> {
+  findOne(id: string): Promise<Article> {
     return this.articleRepository.findOneBy({ id, isOnline: true });
   }
 
-  updateOne(id: number, article: Article): Promise<UpdateResult> {
+  updateOne(id: string, article: Article): Promise<UpdateResult> {
     return this.articleRepository.update(+id, article);
   }
 
-  deleteOne(id: number): Promise<DeleteResult> {
+  deleteOne(id: string): Promise<DeleteResult> {
     return this.articleRepository.delete(+id);
   }
 
-  createOne(article: Article): Article {
-    return this.articleRepository.create(article);
+  createOne(article: Article): Promise<Article> {
+    return this.articleRepository.save(article);
   }
 }
