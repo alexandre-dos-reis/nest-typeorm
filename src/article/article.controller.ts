@@ -12,11 +12,7 @@ import { Article } from "./article.entity";
 
 @Controller("articles")
 export class ArticleController {
-  private readonly articleService: ArticleService;
-
-  constructor(articleService: ArticleService) {
-    this.articleService = articleService;
-  }
+  constructor(private readonly articleService: ArticleService) {}
 
   @Get()
   findAll() {
@@ -25,21 +21,21 @@ export class ArticleController {
 
   @Get(":id")
   findOne(@Param("id") id: number) {
-    return this.articleService.findOne(+id);
+    return this.articleService.find(+id);
   }
 
   @Post()
   create(@Body() article: Article) {
-    return this.articleService.createOne(article);
+    return this.articleService.create(article);
   }
 
   @Patch(":id")
   update(@Param("id") id: string, @Body() article: Article) {
-    return this.articleService.updateOne(+id, article);
+    return this.articleService.update(+id, article);
   }
 
   @Delete(":id")
   remove(@Param("id") id: string) {
-    return this.articleService.deleteOne(+id);
+    return this.articleService.delete(+id);
   }
 }

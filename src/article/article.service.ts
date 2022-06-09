@@ -18,19 +18,19 @@ export class ArticleService {
     return this.articleRepository.findBy({ isOnline: true });
   }
 
-  findOne(id: number): Promise<Article> {
+  find(id: number): Promise<Article> {
     return this.articleRepository.findOneBy({ id, isOnline: true });
   }
 
-  updateOne(id: number, article: Article): Promise<UpdateResult> {
+  update(id: number, article: Article): Promise<UpdateResult> {
     return this.articleRepository.update(+id, article);
   }
 
-  deleteOne(id: number): Promise<DeleteResult> {
+  delete(id: number): Promise<DeleteResult> {
     return this.articleRepository.delete(+id);
   }
 
-  createOne(article: Article): Article {
+  create(article: Article): Article {
     return this.articleRepository.create(article);
   }
 }

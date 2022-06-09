@@ -6,10 +6,10 @@ export class Article extends BaseEntity {
   id: number;
 
   @Column()
-  Title: string;
+  title: string;
 
   @Column()
-  Content: string;
+  content: string;
 
   @Column({ default: false })
   isOnline: boolean;
