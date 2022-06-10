@@ -54,3 +54,6 @@ https://www.youtube.com/watch?v=uy05FqqJ4TM
 [TypeORM Migrations](https://orkhan.gitbook.io/typeorm/docs/migrations#how-migrations-work)
 [TypeORM-seeding](https://github.com/w3tecch/typeorm-seeding)
 [Exploring Nestjs module system](https://javascript.plainenglish.io/exploring-nestjs-nests-module-system-88c6d7ad0970)
+[migrations-missing-required-argument-datasource](https://stackoverflow.com/questions/71803499/typeorm-when-trying-to-run-migrations-missing-required-argument-datasource)
+[pecify-the-migrations-directory-for-typeorm-cli](https://stackoverflow.com/questions/71879806/how-can-i-specify-the-migrations-directory-for-typeorm-cli)
+[Article about TypeORM migrations in Nest](https://www.daz.dev/typeorm-migrations-for-nestjs/)
