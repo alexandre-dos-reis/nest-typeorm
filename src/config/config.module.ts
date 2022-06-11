@@ -1,13 +1,13 @@
 import { Module } from "@nestjs/common";
-import * as NestConfig from "@nestjs/config";
+import * as Nest from "@nestjs/config";
 import { ConfigService } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { DataSource } from "typeorm";
-import typeOrmAsyncConfig from "./database/database.config";
+import typeOrmModuleOptions from "./database/database.config";
 
 @Module({
   imports: [
-    NestConfig.ConfigModule.forRoot({
+    Nest.ConfigModule.forRoot({
       envFilePath: [".env"],
       isGlobal: true,
       cache: true,
@@ -15,7 +15,7 @@ import typeOrmAsyncConfig from "./database/database.config";
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: () => typeOrmAsyncConfig,
+      useFactory: () => typeOrmModuleOptions,
     }),
   ],
 })

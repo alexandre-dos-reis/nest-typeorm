@@ -1,7 +1,8 @@
-import { TypeOrmModuleOptions } from "@nestjs/typeorm";
+import { TypeOrmModuleAsyncOptions, TypeOrmModuleOptions } from "@nestjs/typeorm";
 import { glob } from "glob";
 import { join } from "path";
 import "dotenv/config";
+import { ConfigService } from "@nestjs/config";
 
 export default {
   type: process.env.DB_TYPE,
