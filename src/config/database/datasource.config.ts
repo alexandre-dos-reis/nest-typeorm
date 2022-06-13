@@ -1,8 +1,9 @@
 import { DataSource, DataSourceOptions } from "typeorm";
-import typeOrmModuleOptions from "./database.config";
+import databaseConfig from "./database.config";
+import "dotenv/config";
 
 export const connectionSource = new DataSource({
-  ...(typeOrmModuleOptions as DataSourceOptions),
+  ...(databaseConfig() as DataSourceOptions),
   migrations: ["src/database/migrations/**/*{.ts,.js}"],
 });
 
