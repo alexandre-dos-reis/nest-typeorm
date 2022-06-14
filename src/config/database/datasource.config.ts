@@ -1,6 +1,8 @@
 import { DataSource, DataSourceOptions } from "typeorm";
 import databaseConfig from "./database.config";
-import "dotenv/config";
+import { ConfigModule } from "@nestjs/config";
+
+ConfigModule.forRoot();
 
 export const connectionSource = new DataSource({
   ...(databaseConfig() as DataSourceOptions),

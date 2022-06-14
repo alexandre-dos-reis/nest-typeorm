@@ -1,6 +1,8 @@
 import { ConnectionOptions } from "typeorm-seeding";
 import databaseConfig from "./database.config";
-import "dotenv/config";
+import { ConfigModule } from "@nestjs/config";
+
+ConfigModule.forRoot();
 
 export default {
   ...databaseConfig(),

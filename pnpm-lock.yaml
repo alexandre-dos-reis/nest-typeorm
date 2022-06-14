@@ -17,7 +17,6 @@ specifiers:
   '@types/supertest': ^2.0.11
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
-  dotenv: ^16.0.1
   eslint: ^8.0.1
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
@@ -44,7 +43,6 @@ dependencies:
   '@nestjs/core': 8.4.6_suave6mfkne66p6dqupcjv2744
   '@nestjs/platform-express': 8.4.6_etfae4mmenqzp3rs3pua7csngy
   '@nestjs/typeorm': 8.1.2_gdtrraywlpbnswrihph2jks6ty
-  dotenv: 16.0.1
   glob: 8.0.3
   pg: 8.7.3
   reflect-metadata: 0.1.13

@@ -15,7 +15,7 @@ export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
   @Get()
-  findAll() {
+  getAllArticles() {
     return this.articleService.findAll();
   }
 
