@@ -43,6 +43,9 @@ $ pnpm test:cov
 ```bash
 # Create a module called article with all files.
 $ nest g resource article
+
+# Create a module
+$ nest g module article
 ```
 
 ## Tutorials
@@ -69,7 +72,7 @@ https://www.youtube.com/watch?v=uy05FqqJ4TM
 - [Article about TypeORM migrations in Nest](https://www.daz.dev/typeorm-migrations-for-nestjs/)
 - [NestJS + React Admin Part 1](https://medium.com/fusionworks/creating-admin-like-web-applications-with-nestjs-and-react-admin-part-1-9aab84d970df)
 - [NestJS + React Admin Part 2](https://medium.com/fusionworks/creating-admin-like-web-applications-with-nestjs-and-react-admin-part-2-57da53300300)
-
+- [Pagination-in-nestjs-with-typeorm-swagger](https://pietrzakadrian.com/blog/how-to-create-pagination-in-nestjs-with-typeorm-swagger)
 ### Videos
 - [NestJs Course for Beginners - Create a REST API](https://www.youtube.com/watch?v=GHTA143_b-s)
 - [Tuto complet backend](https://www.youtube.com/watch?v=h0_W9xBsNWc&t=2727s)
