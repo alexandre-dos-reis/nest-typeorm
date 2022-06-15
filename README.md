@@ -41,7 +41,7 @@ $ pnpm test:cov
 ### Generators
 
 ```bash
-# Create a module called article with controller, module, test and service files.
+# Create a folder called article with controller, module, test and service files.
 $ nest g resource article
 
 # Create the module file only.
